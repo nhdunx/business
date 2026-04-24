@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>新丝路 初级速成商务汉语 · TIẾNG TRUNG THƯƠNG MẠI CẤP 2 </title>
+<meta name="description" content="Học tiếng Trung thương mại cấp 2 - Khóa học từ vựng tiếng Trung chuyên biệt cho giao dịch kinh tế. Từ vựng quản lý khách sạn, ngân hàng, giao thông vận tải.">
+<meta name="keywords" content="tiếng Trung thương mại, học tiếng Trung, từ vựng tiếng Trung, khóa học trực tuyến, 新丝路, 商务汉语">
+<meta name="author" content="Nguyễn Hữu Dũng">
+<meta name="robots" content="index, follow">
+<meta name="language" content="Vietnamese">
+<meta name="revisit-after" content="7 days">
+<link rel="canonical" href="https://dunx.id.vn/business">
+<meta property="og:title" content="新丝路 初级速成商务汉语 - Tiếng Trung Thương Mại Cấp 2">
+<meta property="og:description" content="Học tiếng Trung thương mại cấp 2 với từ vựng chuyên biệt cho kinh doanh quốc tế">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dunx.id.vn/business">
+<meta property="og:image" content="https://dunx.id.vn/business/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="新丝路 初级速成商务汉语 - Tiếng Trung Thương Mại">
+<meta name="twitter:description" content="Khóa học tiếng Trung thương mại chuyên biệt">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* Toolbar icon toggles */
+.toolbar-sep{display:inline-block;width:1px;height:24px;background:rgba(255,255,255,.15);vertical-align:middle;margin:0 6px}
+.icon-toggle{width:32px;height:32px;border-radius:50%;border:1.5px solid rgba(0,0,0,.08);background:white;display:inline-flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;transition:all .15s;padding:0;line-height:1;vertical-align:middle;color:#1a0a00;box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.icon-toggle:hover{border-color:rgba(0,0,0,.15);box-shadow:0 2px 8px rgba(0,0,0,.15);transform:scale(1.06)}
+.icon-toggle.on{background:#d4a017;border-color:#d4a017;color:white;box-shadow:0 2px 8px rgba(212,160,23,.35)}
+.icon-toggle.on svg{stroke:white}
+.icon-toggle.on-red{background:#c0392b;border-color:#c0392b;color:white;box-shadow:0 2px 8px rgba(192,57,43,.35)}
+.icon-toggle.on-red svg{stroke:white}
+.icon-toggle.icon-reset{color:#95a5a6;border-color:rgba(0,0,0,.06)}
+.icon-toggle.icon-reset:hover{color:#c0392b}
+/* SVG pinyin icon */
+.icon-toggle.on-red .eye-open{display:none}
+.icon-toggle.on-red .eye-slash{display:inline}
+.icon-toggle:not(.on-red) .eye-open{display:inline}
+.icon-toggle:not(.on-red) .eye-slash{display:none}
+/* Star gạch khi bật ẩn */
+.icon-toggle .star-slash{display:none;position:absolute;width:18px;height:2px;background:#fff;transform:rotate(-45deg);border-radius:1px}
+.icon-toggle.on-red-slash .star-slash{display:block}
+.icon-toggle.on-red-slash{background:#c0392b;border-color:#c0392b;color:white;box-shadow:0 2px 8px rgba(192,57,43,.35);position:relative}
+/* Toolbar actions group */
+.toolbar-actions{margin-left:auto;display:flex;gap:6px;align-items:center}
+.fc-btn{background:#2980b9 !important}
+.fc-btn:hover{background:#1a6da0 !important}
+/* Tăng size chữ Hán ví dụ */
+.ex-hanzi{font-size:17px !important;line-height:1.6 !important}
+</style>
+</head>
+<body>
+
+<!-- ==================== BAI SELECT ==================== -->
+<div id="select-screen" class="screen active">
+  <header class="select-header">
+    <div class="select-logo">阮友勇</div>
+  </header>
+  <div class="select-body">
+    <div class="select-title">
+      <h1>新丝路 初级速成商务汉语 </h1>
+      <p>TIẾNG TRUNG THƯƠNG MẠI CẤP 2</p>
+    </div>
+    <div class="bai-grid" id="bai-grid"></div>
+  </div>
+</div>
+
+<!-- ==================== LEARN APP ==================== -->
+<div id="app-screen" class="screen">
+  <header class="app-header">
+    <div class="app-logo">
+      <button class="btn-back-arrow" onclick="backToSelect()" title="Quay lại">←</button>
+      <span>汉字</span> <span id="app-level-label">Bài 1</span>
+    </div>
+  </header>
+  <div class="toolbar">
+    <button class="mode-btn active" onclick="setMode('all',this)">Tất cả</button>
+    <button class="mode-btn" onclick="setMode('hanzi',this)">KT chữ Hán</button>
+    <button class="mode-btn" onclick="setMode('meaning',this)">KT nghĩa</button>
+    <span class="toolbar-sep"></span>
+    <button class="icon-toggle" id="shuffle-btn" onclick="toggleShuffle()" title="Xáo trộn">🔀</button>
+    <button class="icon-toggle" id="pinyin-btn" onclick="togglePinyin()" title="Ẩn pinyin"><span class="eye-open"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="eye-slash"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg></span></button>
+    <button class="icon-toggle" id="hide-starred-btn" onclick="toggleHideStarred()" title="Ẩn từ đã nhớ">⭐<span class="star-slash"></span></button>
+    <button class="icon-toggle icon-reset" id="reset-btn" onclick="resetAll()" title="Reset">↺</button>
+    <div class="toolbar-actions">
+      <button class="exam-btn fc-btn" onclick="showFlashcard()">🃏 Flashcard</button>
+      <button class="exam-btn" onclick="showExamSetup()">📝 Kiểm tra</button>
+    </div>
+  </div>
+  <div class="search-bar-wrap">
+    <input type="text" class="search-input" id="search-input" placeholder="🔍 Tìm từ (chữ Hán, pinyin hoặc nghĩa)..." oninput="handleSearch(this)">
+  </div>
+  <div class="table-wrap">
+    <table id="tbl" style="display:none">
+      <thead id="thead-row"></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <div class="empty-state" id="empty-state" style="display:none">
+      <div class="empty-big">无</div><div>Không có dữ liệu</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== EXAM SETUP ==================== -->
+<div id="exam-screen" class="screen">
+  <div class="exam-setup">
+    <h2>📝 Bài kiểm tra</h2>
+    <p>Chọn cài đặt và bắt đầu kiểm tra từ vựng của bạn</p>
+    <div class="setup-section">
+      <span class="setup-label">Loại từ</span>
+      <div class="option-group">
+        <button class="opt-btn active" onclick="setExamOpt('pool','all',this)">Tất cả (<span id="exam-total">0</span>)</button>
+        <button class="opt-btn" id="starred-opt" onclick="setExamOpt('pool','starred',this)">Đã nhớ ⭐ (<span id="star-count">0</span>)</button>
+      </div>
+    </div>
+    <div class="setup-section">
+      <span class="setup-label">Loại kiểm tra</span>
+      <div class="option-group">
+        <button class="opt-btn active" onclick="setExamOpt('type','meaning',this)">KT nghĩa</button>
+        <button class="opt-btn" onclick="setExamOpt('type','hanzi',this)">KT chữ Hán</button>
+        <button class="opt-btn" onclick="setExamOpt('type','both',this)">Cả 2</button>
+      </div>
+    </div>
+    <div class="setup-section">
+      <span class="setup-label">Số từ</span>
+      <div class="option-group">
+        <button class="opt-btn active" onclick="setExamOpt('count',10,this)">10</button>
+        <button class="opt-btn" onclick="setExamOpt('count',50,this)">50</button>
+        <button class="opt-btn" id="exam-all-btn" onclick="setExamOpt('count',0,this)">Tất cả</button>
+        <input class="num-input" type="number" id="custom-count" placeholder="Tự nhập..." min="1"
+          oninput="setExamOpt('count',parseInt(this.value)||0,null)">
+      </div>
+      <div class="exam-warn" id="exam-warn"></div>
+    </div>
+    <!-- Toggle bỏ qua từ đã nhớ -->
+    <div class="toggle-row" id="skip-starred-row" onclick="toggleSkipStarred()">
+      <div class="toggle-label">
+        Bỏ qua từ đã nhớ ⭐<br>
+        <small>Chỉ kiểm tra từ chưa đánh dấu ⭐</small>
+      </div>
+      <div class="toggle-switch on" id="skip-starred-toggle"></div>
+    </div>
+    <!-- Toggle ẩn pinyin trong bài kiểm tra -->
+    <div class="toggle-row" id="hide-pinyin-row" onclick="toggleHidePinyinExam()">
+      <div class="toggle-label">
+        Ẩn pinyin trong bài kiểm tra<br>
+        <small>Chỉ hiện chữ Hán, rèn nhớ phát âm</small>
+      </div>
+      <div class="toggle-switch" id="hide-pinyin-toggle"></div>
+    </div>
+    <!-- Tiến độ -->
+    <div class="progress-wrap" id="exam-progress-wrap">
+      <div class="progress-label">
+        <span>Tiến độ</span>
+        <span><b id="prog-starred">0</b> / <span id="prog-total">0</span> từ đã nhớ ⭐</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="prog-fill" style="width:0%"></div></div>
+      <div class="progress-note" id="prog-note">Còn <b>0</b> từ chưa đánh dấu</div>
+    </div>
+    <button class="btn-reset-progress" onclick="resetStarProgress()">↺ Đặt lại tiến độ (xóa hết ⭐)</button>
+    <div style="margin-top:16px">
+      <button class="btn-back" onclick="backToApp()">← Quay lại</button>
+      <button class="btn-start" onclick="startExam()">Bắt đầu →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== QUIZ ==================== -->
+<div id="quiz-screen" class="screen">
+  <div class="quiz-header">
+    <div>
+      <div style="font-family:'Noto Serif SC',SimSun,'Songti SC',serif;font-size:16px;letter-spacing:2px;color:var(--gold-light)">阮友勇</div>
+      <div class="quiz-progress-text" id="quiz-prog-text">Câu 1 / 10</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px">
+      <div class="quiz-progress-bar-wrap"><div class="quiz-progress-bar" id="quiz-bar" style="width:0%"></div></div>
+      <button class="btn-nav" onclick="quitQuiz()">✕ Thoát</button>
+    </div>
+  </div>
+  <div class="quiz-body">
+    <div class="quiz-card" id="quiz-card"></div>
+  </div>
+</div>
+
+<!-- ==================== RESULT ==================== -->
+<div id="result-screen" class="screen">
+  <div class="result-body">
+    <div class="result-card">
+      <div class="result-score" id="res-score">0/0</div>
+      <div class="result-sub" id="res-sub"></div>
+      <div class="result-stats">
+        <div class="stat-box"><div class="stat-num c" id="res-correct">0</div><div class="stat-label">Đúng</div></div>
+        <div class="stat-box"><div class="stat-num w" id="res-wrong">0</div><div class="stat-label">Sai</div></div>
+      </div>
+      <!-- Star save section -->
+      <div class="star-save-section" id="star-save-section">
+        <div class="star-save-title">⭐ Đánh dấu "đã nhớ"</div>
+        <div class="star-save-note">Tick từ nào đã thuộc → lần KT sau bỏ qua. Từ đúng được tick sẵn.</div>
+      </div>
+      <div class="result-list" id="res-list"></div>
+      <div style="margin-top:20px">
+        <button class="btn-save-star" id="btn-save-star" onclick="saveQuizStars()">⭐ Lưu từ đã nhớ</button>
+      </div>
+      <div style="margin-top:16px">
+        <button class="btn-retry" onclick="startExam()">🔄 Làm tiếp từ mới</button>
+        <button class="btn-home" onclick="backToApp()">← Về trang học</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== QUIT QUIZ POPUP ==================== -->
+<div class="modal-overlay" id="quit-modal">
+  <div class="modal-box" style="text-align:center">
+    <div style="font-size:32px;margin-bottom:10px">⏸️</div>
+    <h3 style="margin-bottom:8px">Thoát bài kiểm tra?</h3>
+    <p id="quit-summary" style="color:var(--gray);font-size:13px;margin-bottom:20px"></p>
+    <button class="btn-save-star" onclick="quitAndSave()" style="width:100%;margin-bottom:10px" id="quit-save-btn">⭐ Lưu từ đúng & thoát</button>
+    <button class="btn-home" onclick="quitNoSave()" style="width:100%;margin-bottom:8px">Thoát không lưu</button>
+    <button class="btn-back" onclick="closeQuitModal()" style="width:100%">← Tiếp tục làm</button>
+  </div>
+</div>
+
+<!-- ==================== CHANGE PASSWORD MODAL ==================== -->
+<div class="modal-overlay" id="pw-modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closePwModal()">✕</button>
+    <h3>🔑 Đổi mật khẩu</h3>
+    <div class="field-wrap">
+      <label class="field-label">Mật khẩu hiện tại</label>
+      <input type="password" id="pw-old" placeholder="Nhập mật khẩu hiện tại">
+    </div>
+    <div class="field-wrap">
+      <label class="field-label">Mật khẩu mới</label>
+      <input type="password" id="pw-new" placeholder="Nhập mật khẩu mới">
+    </div>
+    <div class="field-wrap">
+      <label class="field-label">Nhập lại mật khẩu mới</label>
+      <input type="password" id="pw-confirm" placeholder="Nhập lại mật khẩu mới">
+    </div>
+    <button class="btn-login" onclick="doChangePw()" style="margin-top:4px">Đổi mật khẩu</button>
+    <div class="modal-msg" id="pw-msg"></div>
+  </div>
+</div>
+
+<!-- ==================== LOCKED MESSAGE ==================== -->
+<div class="locked-msg" id="locked-msg">
+  <h3>🔒 Nội dung bị khóa</h3>
+  <p>Tạo tài khoản để mở khóa Bài bạn muốn học.<br>Liên hệ Zalo Admin để đăng ký:</p>
+  <p style="font-size:18px;font-weight:700;color:var(--red);margin:10px 0;letter-spacing:1px">📱 0792 739 257</p>
+  <button class="btn-login" onclick="closeLocked()" style="width:auto;padding:10px 24px;font-size:13px;background:var(--gray)">Đóng</button>
+</div>
+
+<!-- ==================== DEMO NOTICE POPUP ==================== -->
+<div class="locked-msg" id="demo-notice" style="display:none">
+  <h3>📱 Tạo tài khoản riêng</h3>
+  <p>Đây là tài khoản dùng thử.<br>Muốn có tài khoản riêng, liên hệ Zalo Admin:</p>
+  <p style="font-size:18px;font-weight:700;color:var(--red);margin:10px 0;letter-spacing:1px">0792 739 257</p>
+  <button class="btn-login" onclick="closeDemoNotice()" style="width:auto;padding:10px 24px;font-size:13px;background:var(--gray)">Đóng</button>
+</div>
+
+<!-- ==================== ZALO FLOATING BUTTON ==================== -->
+<div class="zalo-float" id="zalo-float">
+  <div class="zalo-popup" id="zalo-popup">
+    <button class="zalo-popup-close" onclick="toggleZaloPopup()">✕</button>
+    <div class="zalo-popup-title">Liên hệ Zalo Admin</div>
+    <div class="zalo-popup-num">Crack By Dunx</div>
+    <div class="zalo-popup-note">Bộ phận CSKH · Hỗ trợ 24/7</div>
+  </div>
+  <button class="zalo-bubble" onclick="toggleZaloPopup()" title="CSKH Zalo">
+    <svg width="24" height="24" viewBox="0 0 48 48" fill="none"><path d="M24 4C12.95 4 4 12.07 4 22c0 5.52 2.87 10.43 7.34 13.66L9.5 43l7.84-4.15C19.56 39.6 21.73 40 24 40c11.05 0 20-8.07 20-18S35.05 4 24 4z" fill="white"/><text x="24" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#0068FF" font-family="sans-serif">Z</text></svg>
+  </button>
+</div>
+
+
+<!-- ==================== FLASHCARD SETUP ==================== -->
+<div id="fc-setup-screen" class="screen">
+  <div class="quiz-header">
+    <div>
+      <div style="font-family:'Noto Serif SC',SimSun,'Songti SC',serif;font-size:16px;letter-spacing:2px;color:var(--gold-light)">阮友勇</div>
+      <div class="quiz-progress-text">🃏 Flashcard</div>
+    </div>
+    <div><button class="btn-nav" onclick="backToApp()">← Quay lại</button></div>
+  </div>
+  <div class="exam-setup">
+    <h2>🃏 Flashcard</h2>
+    <p>Luyện nhớ từ vựng bằng thẻ ghi nhớ</p>
+    <div class="setup-section">
+      <span class="setup-label">Loại từ</span>
+      <div class="option-group">
+        <button class="opt-btn active" onclick="setFcOpt('pool','all',this)">Tất cả (<span id="fc-total">0</span>)</button>
+        <button class="opt-btn" onclick="setFcOpt('pool','starred',this)">Đã nhớ ⭐ (<span id="fc-starred">0</span>)</button>
+        <button class="opt-btn" onclick="setFcOpt('pool','unstarred',this)">Chưa nhớ (<span id="fc-unstarred">0</span>)</button>
+      </div>
+    </div>
+    <div class="setup-section">
+      <span class="setup-label">Thứ tự</span>
+      <div class="option-group">
+        <button class="opt-btn active" onclick="setFcOpt('order','seq',this)">Theo thứ tự</button>
+        <button class="opt-btn" onclick="setFcOpt('order','rand',this)">Ngẫu nhiên</button>
+      </div>
+    </div>
+    <div class="setup-section">
+      <span class="setup-label">Số từ</span>
+      <div class="option-group">
+        <button class="opt-btn active" onclick="setFcOpt('count',10,this)">10</button>
+        <button class="opt-btn" onclick="setFcOpt('count',50,this)">50</button>
+        <button class="opt-btn" onclick="setFcOpt('count',0,this)">Tất cả</button>
+        <input class="num-input" type="number" id="fc-custom-count" placeholder="Tự nhập..." min="1"
+          oninput="setFcOpt('count',parseInt(this.value)||0,null)">
+      </div>
+    </div>
+    <div class="toggle-row" onclick="toggleFcPinyin()">
+      <div class="toggle-label">Ẩn pinyin<br><small>Chỉ hiện chữ Hán, rèn nhớ phát âm</small></div>
+      <div class="toggle-switch" id="fc-pinyin-toggle"></div>
+    </div>
+    <div style="margin-top:16px">
+      <button class="btn-back" onclick="backToApp()">← Quay lại</button>
+      <button class="btn-start" onclick="startFc()">Bắt đầu →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== FLASHCARD PLAY ==================== -->
+<div id="fc-play-screen" class="screen">
+  <div class="quiz-header">
+    <div>
+      <div style="font-family:'Noto Serif SC',SimSun,'Songti SC',serif;font-size:16px;letter-spacing:2px;color:var(--gold-light)">Flashcard</div>
+      <div class="quiz-progress-text" id="fc-prog-text">1/10</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px">
+      <div class="quiz-progress-bar-wrap"><div class="quiz-progress-bar" id="fc-prog-bar" style="width:10%"></div></div>
+      <button class="btn-nav" onclick="showFcQuit()">✕ Thoát</button>
+    </div>
+  </div>
+  <div class="fc-body">
+    <div class="fc-card-wrap" onclick="fcFlip(event)">
+      <div class="fc-card" id="fc-card">
+        <div class="fc-face fc-front">
+          <div class="fc-face-top"><button class="fc-star" id="fc-sf" onclick="event.stopPropagation();fcToggleStar()">⭐</button></div>
+          <div class="fc-face-center">
+            <div class="fc-hanzi" id="fc-hanzi">学</div>
+            <div class="fc-pinyin" id="fc-pinyin">xué</div>
+            <button class="fc-speak-btn" onclick="event.stopPropagation();fcSpeak()">🔊</button>
+          </div>
+          <div class="fc-face-bottom"><span class="fc-hint">👆 Nhấp để xem nghĩa</span></div>
+        </div>
+        <div class="fc-face fc-back">
+          <div class="fc-face-top"><button class="fc-star" id="fc-sb" onclick="event.stopPropagation();fcToggleStar()">⭐</button></div>
+          <div class="fc-face-center">
+            <div class="fc-tuloai" id="fc-tuloai">Động từ</div>
+            <div class="fc-meaning" id="fc-meaning">học</div>
+            <div class="fc-example" id="fc-example">
+              <div class="fc-ex-hanzi" id="fc-ex-hanzi"></div>
+              <div class="fc-ex-pinyin" id="fc-ex-pinyin"></div>
+              <div class="fc-ex-viet" id="fc-ex-viet"></div>
+            </div>
+          </div>
+          <div class="fc-face-bottom"><span class="fc-hint">👆 Nhấp để xem mặt trước</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="fc-nav">
+      <button class="fc-nav-btn" id="fc-prev" onclick="fcPrev()">◀</button>
+      <div class="fc-nav-line"></div>
+      <div class="fc-nav-counter"><span id="fc-cur">1</span>/<span id="fc-tot">10</span></div>
+      <div class="fc-nav-line"></div>
+      <button class="fc-nav-btn" id="fc-next" onclick="fcNext()">▶</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== FLASHCARD QUIT MODAL ==================== -->
+<div class="modal-overlay" id="fc-quit-modal">
+  <div class="modal-box" style="text-align:center">
+    <div style="font-size:32px;margin-bottom:10px">⏸️</div>
+    <h3 style="margin-bottom:8px">Thoát Flashcard?</h3>
+    <p id="fc-quit-summary" style="color:var(--gray);font-size:13px;margin-bottom:20px"></p>
+    <button class="btn-save-star" id="fc-quit-save" onclick="fcQuitSave()" style="width:100%;margin-bottom:10px"></button>
+    <button class="btn-home" onclick="fcQuitNoSave()" style="width:100%;margin-bottom:8px">Thoát không lưu</button>
+    <button class="btn-back" onclick="closeFcQuit()" style="width:100%">← Tiếp tục học</button>
+  </div>
+</div>
+
+<!-- ==================== FLASHCARD END ==================== -->
+<div id="fc-end-screen" class="screen">
+  <div class="quiz-header">
+    <div>
+      <div style="font-family:'Noto Serif SC',SimSun,'Songti SC',serif;font-size:16px;letter-spacing:2px;color:var(--gold-light)">阮友勇</div>
+    </div>
+  </div>
+  <div class="result-body">
+    <div class="result-card" style="text-align:center">
+      <div style="font-size:48px;margin-bottom:12px">🎉</div>
+      <div class="result-score">Hoàn thành!</div>
+      <div class="result-sub">Bạn đã lướt qua tất cả từ vựng</div>
+      <div class="result-stats">
+        <div class="stat-box"><div class="stat-num c" id="fc-end-total">10</div><div class="stat-label">Tổng từ</div></div>
+        <div class="stat-box"><div class="stat-num" id="fc-end-starred" style="color:var(--gold)">5</div><div class="stat-label">Đã nhớ ⭐</div></div>
+      </div>
+      <div style="margin-top:20px">
+        <button class="btn-save-star" id="fc-end-save" onclick="fcEndSave()">⭐ Lưu từ đã nhớ</button>
+      </div>
+      <div style="margin-top:16px">
+        <button class="btn-retry" onclick="startFc()">🔄 Học lại</button>
+        <button class="btn-home" onclick="backToApp()">← Về trang học</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ===== FLASHCARD STYLES ===== */
+#fc-setup-screen,#fc-play-screen,#fc-end-screen{border:none !important;outline:none !important;box-shadow:none !important;background:var(--paper,#fdf6ec)}
+#fc-play-screen > *:not(.quiz-header):not(.fc-body),#fc-play-screen .fc-body{border:none !important;outline:none !important;box-shadow:none !important}
+.fc-body{max-width:420px;margin:0 auto;padding:16px 16px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 48px);border:none !important;background:transparent !important}
+.fc-card-wrap{width:100%;max-width:400px;height:440px;perspective:1200px;cursor:pointer;margin-bottom:24px;flex-shrink:0}
+.fc-card{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.fc-card.flipped{transform:rotateY(180deg)}
+.fc-card.anim-left{animation:fcSlideL .35s ease}
+.fc-card.anim-right{animation:fcSlideR .35s ease}
+@keyframes fcSlideL{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fcSlideR{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:translateX(0)}}
+.fc-face{position:absolute;top:0;left:0;width:100%;height:100%;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;display:flex;flex-direction:column;padding:20px 24px;box-shadow:0 4px 24px rgba(26,10,0,.13);overflow:hidden;background:white;border:1.5px solid rgba(192,57,43,.12)}
+.fc-back{transform:rotateY(180deg)}
+.fc-face-top{width:100%;display:flex;justify-content:flex-end}
+.fc-face-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.fc-face-bottom{width:100%;text-align:center}
+.fc-hanzi{font-family:'Noto Serif SC',SimSun,'Songti SC',serif;font-size:84px;color:var(--red-dark,#922b21);line-height:1.15}
+.fc-pinyin{font-size:24px;color:#95a5a6;font-style:italic;min-height:32px}
+.fc-speak-btn{width:52px;height:52px;border-radius:50%;background:none;border:2px solid rgba(192,57,43,.2);cursor:pointer;font-size:24px;display:flex;align-items:center;justify-content:center;transition:all .2s;margin-top:6px;padding:0;line-height:1}
+.fc-speak-btn:hover{background:rgba(192,57,43,.08);border-color:#c0392b}
+.fc-hint{font-size:13px;color:#95a5a6;letter-spacing:.5px;opacity:.6}
+.fc-tuloai{display:inline-block;font-size:14px;font-weight:700;padding:5px 16px;border-radius:12px;background:rgba(212,160,23,.15);color:#d4a017;letter-spacing:.5px}
+.fc-meaning{font-size:36px;font-weight:600;color:#1a0a00;text-align:center;line-height:1.3}
+.fc-example{width:100%;padding:14px 16px;background:#fdf6ec;border-radius:8px;border-left:3px solid #d4a017}
+.fc-ex-hanzi{font-family:'Noto Serif SC',SimSun,'Songti SC',serif;font-size:17px;color:#922b21;line-height:1.6}
+.fc-ex-pinyin{font-size:14px;color:#95a5a6;font-style:italic;margin-top:3px}
+.fc-ex-viet{font-size:14px;color:#1a0a00;margin-top:4px;font-weight:500}
+.fc-star{width:40px;height:40px;font-size:26px;cursor:pointer;transition:transform .2s;filter:grayscale(1) opacity(.3);user-select:none;display:flex;align-items:center;justify-content:center;border-radius:50%;background:none;border:none;padding:0;line-height:1}
+.fc-star.on{filter:none;transform:scale(1.15)}
+.fc-star:hover{transform:scale(1.2)}
+.fc-nav{display:flex;align-items:center;justify-content:center;gap:16px;width:100%;max-width:400px;flex-shrink:0}
+.fc-nav-btn{width:50px;height:50px;border-radius:50%;border:2px solid rgba(192,57,43,.2);background:white;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;transition:all .2s;color:#1a0a00;box-shadow:0 1px 4px rgba(0,0,0,.1);padding:0;line-height:1}
+.fc-nav-btn:hover:not(:disabled){border-color:#c0392b;color:#c0392b;background:rgba(192,57,43,.05);transform:scale(1.08)}
+.fc-nav-btn:disabled{opacity:.25;cursor:default}
+.fc-nav-btn.fc-done{background:rgba(39,174,96,.08);border-color:#27ae60;color:#27ae60;font-size:22px}
+.fc-nav-btn.fc-done:hover{background:rgba(39,174,96,.18);transform:scale(1.08)}
+.fc-nav-line{width:20px;height:1px;background:rgba(192,57,43,.1)}
+.fc-nav-counter{font-size:15px;font-weight:600;color:#95a5a6;min-width:60px;text-align:center}
+.fc-nav-counter span{color:#c0392b;font-size:22px;font-family:'Noto Serif SC',serif}
+@media(max-width:600px){.fc-card-wrap{max-width:340px;height:380px}.fc-hanzi{font-size:64px}.fc-pinyin{font-size:20px}.fc-meaning{font-size:28px}.fc-tuloai{font-size:12px;padding:4px 12px}.fc-ex-hanzi{font-size:15px}.fc-ex-pinyin{font-size:12px}.fc-ex-viet{font-size:13px}}
+</style>
+
+<!-- ==================== DATA & LOGIC ==================== -->
+<script src="baidata.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
